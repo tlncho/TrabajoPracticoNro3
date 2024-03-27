@@ -1,14 +1,9 @@
-
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
 public class LoginForm extends JFrame implements ActionListener {
     private JTextField emailField, passwordField;
 
@@ -37,18 +32,16 @@ public class LoginForm extends JFrame implements ActionListener {
         add(panel);
     }
 
-  public void actionPerformed(ActionEvent e) {
-    String email = emailField.getText();
-    String password = passwordField.getText();
+    public void actionPerformed(ActionEvent e) {
+        String email = emailField.getText();
+        String password = passwordField.getText();
 
-    if (email.equals("alumno@ulp.edu.ar") && password.equals("12345678")) {
-        JOptionPane.showMessageDialog(this, "¡Bienvenido!");
-    } else {
-        JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+        if (email.equals("alumno@ulp.edu.ar") && password.equals("12345678")) {
+            JOptionPane.showMessageDialog(this, "¡Bienvenido!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+        }
     }
-}
-  
-  
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
