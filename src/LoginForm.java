@@ -37,16 +37,18 @@ public class LoginForm extends JFrame implements ActionListener {
         add(panel);
     }
 
-    public void actionPerformed(ActionEvent e) {
-        String email = emailField.getText();
-        String password = passwordField.getText();
+  public void actionPerformed(ActionEvent e) {
+    String email = emailField.getText();
+    String password = passwordField.getText();
 
-        if (email.equals("alumno@ulp.edu.ar") && password.equals("12345678")) {
-            JOptionPane.showMessageDialog(this, "¡Bienvenido!");
-        } else {
-            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
-        }
+    if (email.equals("alumno@ulp.edu.ar") && password.equals("12345678")) {
+        JOptionPane.showMessageDialog(this, "¡Bienvenido!");
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
     }
+}
+  
+  
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
